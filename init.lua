@@ -240,60 +240,60 @@ Config.PolyZones = {
 }
 
 Config.TargetBones = {
-	["trunk"] = {
-        bones = {
-            'boot'
-        },
-        options = {
-            {
-                type = "client",
-                event = "gameplay:getintrunk",
-                icon = "fas fa-person-booth",
-                label = "Get in Trunk",
-            },
-        },
-        distance = 2.5
-    },
-	["keys"] = {
-        bones = {
-            'bodyshell',
-			'chassis'
-        },
-        options = {
-            {
-                type = "client",
-                event = "keys:giveKey",
-                icon = "fas fa-key",
-                label = "Give Keys",
-            },
-            {
-                type = "client",
-                event = "police:client:PutPlayerInVehicle",
-                icon = "fas fa-user-plus",
-                label = "Seat in Vehicle",
-            },
-            {
-                type = "client",
-                event = "police:client:SetPlayerOutVehicle",
-                icon = "fas fa-user-minus",
-                label = "Take out Vehicle",
-            },
-            {
-                type = "client",
-                event = "police:client:depot",
-                icon = "fas fa-truck-moving",
-                label = "Impound Vehicle",
-                job = "police",
-            },
-            {
-                type = "client",
-                event = "FlipVehicle",
-                label = 'Flip Vehicle',
-                icon = 'fas fa-chevron-circle-up',
-            },
-        },
-        distance = 2.5
-    },
+	-- ["trunk"] = {
+ --        bones = {
+ --            'boot'
+ --        },
+ --        options = {
+ --            {
+ --                type = "client",
+ --                event = "gameplay:getintrunk",
+ --                icon = "fas fa-person-booth",
+ --                label = "Get in Trunk",
+ --            },
+ --        },
+ --        distance = 2.5
+ --    },
+	-- ["keys"] = {
+ --        bones = {
+ --            'bodyshell',
+	-- 		'chassis'
+ --        },
+ --        options = {
+ --            {
+ --                type = "client",
+ --                event = "keys:giveKey",
+ --                icon = "fas fa-key",
+ --                label = "Give Keys",
+ --            },
+ --            {
+ --                type = "client",
+ --                event = "police:client:PutPlayerInVehicle",
+ --                icon = "fas fa-user-plus",
+ --                label = "Seat in Vehicle",
+ --            },
+ --            {
+ --                type = "client",
+ --                event = "police:client:SetPlayerOutVehicle",
+ --                icon = "fas fa-user-minus",
+ --                label = "Take out Vehicle",
+ --            },
+ --            {
+ --                type = "client",
+ --                event = "police:client:depot",
+ --                icon = "fas fa-truck-moving",
+ --                label = "Impound Vehicle",
+ --                job = "police",
+ --            },
+ --            {
+ --                type = "client",
+ --                event = "FlipVehicle",
+ --                label = 'Flip Vehicle',
+ --                icon = 'fas fa-chevron-circle-up',
+ --            },
+ --        },
+ --        distance = 2.5
+ --    },
 }
 
 Config.TargetModels = {
@@ -423,7 +423,8 @@ CreateThread(function()
 			Wait(1000)
 		end
 	else
-		local BJCore = exports['core']:GetCoreObject()
+		BJCore = nil
+		Citizen.CreateThread(function(...) while BJCore == nil do TriggerEvent("BJCore:GetObject", function(obj) BJCore = obj end); Citizen.Wait(1000); end; end)
 		local PlayerData = BJCore.Functions.GetPlayerData()
 
 		ItemCheck = function(items)
