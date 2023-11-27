@@ -13,11 +13,16 @@ thirdeye is a targeting solution that allows interaction with any predefined ent
 ## Dependency
 
 * [PolyZone](https://github.com/mkafrin/PolyZone)
-* [BJCore Framework] 
+
+## Optional Dependency
+
+* [QBCore](https://github.com/qbcore-framework/qb-core)
 
 ## Information
 
 This repository was originally a direct fork and now it's own repository as it's basically qtarget but with lots of changes to it to make it better, most of the code comes from qtarget as I find their work awesome on this and what they've achieved with it.
+
+You are free to help through Pull Requests and leave as much suggestions or issues, I love some help!
 
 The TEMPLATES.md and EXAMPLES.md are always being improved and new examples can be made on request, just let me know!
 
@@ -33,7 +38,3 @@ The TEMPLATES.md and EXAMPLES.md are always being improved and new examples can 
 - Support checking for job, gang, citizenid, items, or specific entities
 - Utilise the `canInteract` function for advanced checks to show or hide an option based on any trigger
 - Ped spawner to spawn peds and assign target options to them all in one place
-
-
-## DISCLAIMER
-- none of this code belongs to me & all credits to the original authors of the script, ive simply converted this to work with the BJCore Framework made by TMC.

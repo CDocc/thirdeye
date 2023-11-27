@@ -23,7 +23,7 @@ exports['thirdeye']:AddBoxZone("MissionRowDutyClipboard", vector3(441.7989, -982
 	options = {
 		{
             type = "client",
-            event = "policejob:ToggleDuty",
+            event = "qb-policejob:ToggleDuty",
 			icon = "fas fa-sign-in-alt",
 			label = "Sign In",
 			job = "police",
@@ -49,7 +49,7 @@ Config.BoxZones = {
         options = {
             {
                 type = "client",
-                event = "policejob:ToggleDuty",
+                event = "qb-policejob:ToggleDuty",
                 icon = "fas fa-sign-in-alt",
                 label = "Sign In",
                 job = "police",

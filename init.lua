@@ -70,45 +70,6 @@ Config.CircleZones = {
 }
 
 Config.BoxZones = {
-	["EMSArmory"] = {
-        name = "EMSArmory",
-        coords = vector3(309.874, -568.4109, 43.28406),
-        length = 1.5,
-        width = 1.5,
-        heading = 237.872,
-        debugPoly = false,
-        minZ = 42.8406,
-        maxZ = 43.8406,
-        options = {
-            {
-                type = "client",
-                event = "hospital:openEMSArmory",
-                icon = "fas fa-clipboard",
-                label = "Open NHS Inventory",
-                job = "ambulance",
-            }
-        },
-        distance = 2.5
-    },
-    ["cityhall"] = {
-        name = "cityhall",
-        coords = vector3(-549.3317, -191.0541, 38.22308),
-        length = 1.5,
-        width = 1.5,
-        heading = 29.33971,
-        debugPoly = false,
-        minZ = 37.22319,
-        maxZ = 38.92319,
-        options = {
-            {
-                type = "client",
-                event = "citycenter",
-                icon = "fas fa-clipboard",
-                label = "Cityhall",
-            }
-        },
-        distance = 2.5
-    },
 	["AmbulanceDuty"] = {
         name = "AmbulanceDuty",
         coords = vector3(311.88, -593.43, 43.28),
@@ -149,223 +110,71 @@ Config.BoxZones = {
         },
         distance = 2.5
     },
-    ["PoliceDutyPaleto"] = {
-        name = "PoliceDutyPaleto",
-        coords = vector3(-447.668, 6013.121, 32.2142),
-        length = 2,
-        width = 2,
-        heading = 263.446,
-        debugPoly = false,
-        minZ = 31.32,
-        maxZ = 33.02,
-        options = {
-            {
-                type = "server",
-                event = "BJCore:ToggleDuty",
-                icon = "fas fa-clipboard",
-                label = "Duty",
-                job = "police",
-            }
-        },
-        distance = 2.5
-    },
-    ["PoliceDutyDavis"] = {
-        name = "PoliceDutyDavis",
-        coords = vector3(381.1995, -1595.759, 30.06561),
-        length = 2,
-        width = 2,
-        heading = 263.446,
-        debugPoly = false,
-        minZ = 29.32,
-        maxZ = 31.02,
-        options = {
-            {
-                type = "server",
-                event = "BJCore:ToggleDuty",
-                icon = "fas fa-clipboard",
-                label = "Duty",
-                job = "police",
-            }
-        },
-        distance = 2.5
-    },
-    --vector4(381.1995, -1595.759, 30.06561, 232.9357)
-    ["PoliceDutySandy"] = {
-        name = "PoliceDutySandy",
-        coords = vector3(1852.58, 3689.86, 34.58),
-        length = 3,
-        width = 3,
-        heading = 26.41,
-        debugPoly = false,
-        minZ = 34.12,
-        maxZ = 35.02,
-        options = {
-            {
-                type = "server",
-                event = "BJCore:ToggleDuty",
-                icon = "fas fa-clipboard",
-                label = "Duty",
-                job = "police",
-            }
-        },
-        distance = 2.5
-    },
 }
 
 Config.PolyZones = {
-    -- ["vehicleshop_selling"] = {
-    --     name = "vehicleshop_selling",
-    --     points = {
-    --         vector2(-21.83814239502, -1081.2548828125),
-    --         vector2(-19.58084487915, -1075.1804199219),
-    --         vector2(-1.6975636482239, -1081.6516113281),
-    --         vector2(-3.8894486427307, -1087.3189697266)
-    --     },
-    --     polyOptions = {
-    --       name = "vehicleshop_selling",
-    --       debugPoly = false,
-    --       minZ = 26.305227279663,
-    --       maxZ = 28.305227279663
-    --     },
-    --     options = {
-    --       {
-    --         type = "client",
-    --         event = "ic-vehicleshop:sell_vehicle",
-    --         icon = "fas fa-car",
-    --         label = "Sell vehicle",
-    --         flag = "inVehicle"
-    --       },
-    --     },
-    -- },
+
 }
 
 Config.TargetBones = {
-	-- ["trunk"] = {
- --        bones = {
- --            'boot'
- --        },
- --        options = {
- --            {
- --                type = "client",
- --                event = "gameplay:getintrunk",
- --                icon = "fas fa-person-booth",
- --                label = "Get in Trunk",
- --            },
- --        },
- --        distance = 2.5
- --    },
-	-- ["keys"] = {
- --        bones = {
- --            'bodyshell',
-	-- 		'chassis'
- --        },
- --        options = {
- --            {
- --                type = "client",
- --                event = "keys:giveKey",
- --                icon = "fas fa-key",
- --                label = "Give Keys",
- --            },
- --            {
- --                type = "client",
- --                event = "police:client:PutPlayerInVehicle",
- --                icon = "fas fa-user-plus",
- --                label = "Seat in Vehicle",
- --            },
- --            {
- --                type = "client",
- --                event = "police:client:SetPlayerOutVehicle",
- --                icon = "fas fa-user-minus",
- --                label = "Take out Vehicle",
- --            },
- --            {
- --                type = "client",
- --                event = "police:client:depot",
- --                icon = "fas fa-truck-moving",
- --                label = "Impound Vehicle",
- --                job = "police",
- --            },
- --            {
- --                type = "client",
- --                event = "FlipVehicle",
- --                label = 'Flip Vehicle',
- --                icon = 'fas fa-chevron-circle-up',
- --            },
- --        },
- --        distance = 2.5
- --    },
+	["trunk"] = {
+        bones = {
+            'boot'
+        },
+        options = {
+            {
+                type = "client",
+                event = "gameplay:getintrunk",
+                icon = "fas fa-person-booth",
+                label = "Get in Trunk",
+            },
+        },
+        distance = 2.5
+    },
+	["keys"] = {
+        bones = {
+            'bodyshell',
+			'chassis'
+        },
+        options = {
+            {
+                type = "client",
+                event = "keys:giveKey",
+                icon = "fas fa-key",
+                label = "Give Keys",
+            },
+            {
+                type = "client",
+                event = "police:client:PutPlayerInVehicle",
+                icon = "fas fa-user-plus",
+                label = "Seat in Vehicle",
+            },
+            {
+                type = "client",
+                event = "police:client:SetPlayerOutVehicle",
+                icon = "fas fa-user-minus",
+                label = "Take out Vehicle",
+            },
+            {
+                type = "client",
+                event = "police:client:depot",
+                icon = "fas fa-truck-moving",
+                label = "Impound Vehicle",
+                job = "police",
+            },
+            {
+                type = "client",
+                event = "FlipVehicle",
+                label = 'Flip Vehicle',
+                icon = 'fas fa-chevron-circle-up',
+            },
+        },
+        distance = 2.5
+    },
 }
 
 Config.TargetModels = {
-	["atms"] = {
-        models = {
-            `prop_atm_01`,
-            `prop_atm_02`,
-            `prop_atm_03`,
-            `prop_fleeca_atm`
-        },
-        options = {
-            {
-                type = "command",
-                event = "atm",
-                parameters = {},
-                debugPoly = false,
-                icon = "fab fa-cc-visa",
-                label = "Use ATM",
-            },
-        },
-        distance = 2.5
-    },
-    ["vending"] = {
-        models = {
-            `prop_vend_soda_02`,
-            `prop_vend_soda_01`,
-            `prop_vend_snak_01`,
-        },
-        options = {
-            {
-                type = "client",
-                event = "inventory:checkForVending",
-                parameters = {},
-                icon = "fas fa-candy-cane",
-                label = "Vending",
-
-            },
-        },
-        distance = 2.5
-    },
-    ["vendingcoffee"] = {
-        models = {
-            `prop_vend_coffe_01`,
-        },
-        options = {
-            {
-                type = "client",
-                event = "inventory:checkForVendingCoffee",
-                parameters = {},
-                icon = "fas fa-coffee",
-                label = "Coffee Machine",
-
-            },
-        },
-        distance = 2.5
-    },
-    ["FuelerJob"] = { --aircon:sellScrapMenu chop:sellScrapMenu
-        models = {
-            `s_m_m_dockwork_01`,
-        },
-        options = {
-            {
-                type = "client",
-                event = "fueler:client:toggleFuelRun",
-                parameters = {},
-                icon = "fas fa-comments",
-                label = "Fueler Job",
-
-            },
-        },
-        distance = 2.5
-    },
+    
 }
 
 Config.GlobalPedOptions = {
@@ -423,8 +232,7 @@ CreateThread(function()
 			Wait(1000)
 		end
 	else
-		BJCore = nil
-		Citizen.CreateThread(function(...) while BJCore == nil do TriggerEvent("BJCore:GetObject", function(obj) BJCore = obj end); Citizen.Wait(1000); end; end)
+		local BJCore = exports['core']:GetCoreObject()
 		local PlayerData = BJCore.Functions.GetPlayerData()
 
 		ItemCheck = function(items)
