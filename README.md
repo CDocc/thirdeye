@@ -10,6 +10,8 @@ thirdeye is a targeting solution that allows interaction with any predefined ent
 
 * Credit to [ms-peds](https://github.com/MiddleSkillz/ms-peds) for allowing me to use their awesome ped spawner inside the target!
 
+* Credit to the original Developers of this script i have only converted it to work with BJCore Framework.
+
 ## Dependency
 
 * [PolyZone](https://github.com/mkafrin/PolyZone)
